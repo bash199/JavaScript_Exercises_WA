@@ -12,14 +12,14 @@
 
 function yearsAndCenturies(number){
    let century ;
-   if(number>=1&&number<=100){century = 1;};
-   if(number>=101){
+   if(number>=1&&number<=100){century = 1;}
+   else if(number>=101){
       if ( number % 100 !==0) {
          century = (Math.floor(number/100)) +1 ;
-      };
-      if(number %100 ===0 ) {
+      }
+      else if(number %100 ===0 ) {
          century = number/100 ;
-      };
+      }
    };
    return century;
 };
