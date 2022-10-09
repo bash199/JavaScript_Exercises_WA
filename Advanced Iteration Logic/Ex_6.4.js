@@ -8,11 +8,12 @@
 
 function isIsogram(string){
    let str = string.toLowerCase();
-   let count ={}, result=0; 
+   let count ={d:2}, result=0; 
    for (let i = 0; i < str.length; i++) {
+     
       if(!count[str[i]]){
          count[str[i]] = 1;
-         // console.log(count);
+         console.log(count);
       }
       else{
          if(count[str[i]]===1){
@@ -22,15 +23,10 @@ function isIsogram(string){
          count[str[i]]+= 1;
       }  
    }
-   if(result==0){
-      return true;
-   }
-   else{
-      return false;
-   }
-   // return result;
+   
+   return result;
 };
 console.log(isIsogram("Dermatoglyphics"));
-console.log(isIsogram("aba"));
-console.log(isIsogram("moOse"));
+// console.log(isIsogram("aba"));
+// console.log(isIsogram("moOse"));
 

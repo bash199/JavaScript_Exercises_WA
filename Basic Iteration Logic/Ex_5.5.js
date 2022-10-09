@@ -6,7 +6,7 @@
 
 const abbreviateTwoWords = (string) => {
    let array = string.split(' ');
-   return array.map((el,i)=>{
+   return array.map((el)=>{
       return el[0].toUpperCase()
    }).join('.');
 };

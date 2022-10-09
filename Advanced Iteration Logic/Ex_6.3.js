@@ -24,3 +24,14 @@ const longest = (s1,s2) => {
 };
 console.log(longest(a,b));
 console.log(longest(a2,a2));
+
+console.log('---↑↑↑-longest-↑↑↑------↓↓↓-longest2-↓↓↓-----');
+
+//!  or with set:
+const longest2 = (s1,s2) => {
+   let str =new Set(s1.concat(s2));
+   let res =[...str].join('')
+   return res
+};
+console.log(longest2(a,b));
+console.log(longest2(a2,a2));

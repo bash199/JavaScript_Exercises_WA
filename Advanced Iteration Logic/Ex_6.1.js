@@ -16,8 +16,8 @@ function accum(string){
    return word.join('-');
 }; 
 console.log(accum("abcd"));
-console.log(accum("RqaEzty"));
-console.log(accum("cwAt"));
+// console.log(accum("RqaEzty"));
+// console.log(accum("cwAt"));
 
 
 

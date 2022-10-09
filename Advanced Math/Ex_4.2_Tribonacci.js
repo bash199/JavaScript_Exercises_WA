@@ -10,29 +10,23 @@
 //? that we would get the same sequence shifted by 2 places, but that is not the case and we would get:
 //? [0, 0, 1, 1, 2, 4, 7, 13, 24, ...]
 //? Well, you may have guessed it by now, but to be clear: you need to create a fibonacci function that given a signature array/list, returns the first n elements - signature included of the so seeded sequence.
-//? Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then/ return an empty array (except in C return NULL) and be ready for anything else which is not clearly specified ;)
+//? Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then/ return an empty array and be ready for anything else which is not clearly specified ;)
 
 const tribonacci = (array,length) =>{
-   let startWith=array.length;
-   const arr=array;
-   
-   if(length==0){
+   let startWith = array.length;
+   const arr = array;
+   if (length==0) {
       return [];
-   };
-   if(startWith===3){
-      for (let i = 0; i < length-startWith ; i++) {
-         arr.push(arr[i]+arr[i-1]+arr[i-2]);
-      };
    }
-   else if(startWith>3){
-      for (let i = startWith; i < length ; i++) {
-         arr.push(arr[i-1]+arr[i-2]+arr[i-3]);
+   else   {
+      for (let i = 0; i < length-3 ; i++) {
+         arr.push(arr[i]+arr[i+1]+arr[i+2]);
       };
    }
       return arr;
 };
-//* console.log(tribonacci([1, 1, 1],8));
-//* console.log(tribonacci([0, 0, 1, 2],10));
-//* console.log(tribonacci([0, 0, 1],0));
+ console.log(tribonacci([1, 1, 1],8));
+//  console.log(tribonacci([0, 1, 1],10));
+//  console.log(tribonacci([0, 0, 1],0));
 
 

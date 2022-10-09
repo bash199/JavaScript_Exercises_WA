@@ -12,7 +12,7 @@
 //? "aA11" -> 2 # 'a' and '1'
 //? "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-console.log(countingDuplicates("Dermatoglyphics"));
+console.log(countingDuplicates("aabBcde"));
 
 function countingDuplicates(string){
    let str = string.toLowerCase();
@@ -20,12 +20,12 @@ function countingDuplicates(string){
    for (let i = 0; i < str.length; i++) {
       if(!count[str[i]]){
          count[str[i]] = 1;
-         // console.log(count);
+         console.log(count);
       }
       else{
          if(count[str[i]]===1){
             result += 1;
-            // console.log(count);
+            console.log(result);
          }
          count[str[i]]+= 1;
       }  
