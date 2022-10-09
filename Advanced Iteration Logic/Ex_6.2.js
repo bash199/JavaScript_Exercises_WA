@@ -12,17 +12,159 @@
 //? "aA11" -> 2 # 'a' and '1'
 //? "ABBA" -> 2 # 'A' and 'B' each occur twice
 
-const func=(string)=>{
-   let str = string.toLowerCase()
-   let count = {} ;
-   for(let i=0; i<str.length;i++){
-      if(count[str[i]]){
-         count[str[i]]++;
+console.log(countingDuplicates("Dermatoglyphics"));
+
+function countingDuplicates(string){
+   let str = string.toLowerCase();
+   let count ={}, result=0; 
+   for (let i = 0; i < str.length; i++) {
+      if(!count[str[i]]){
+         count[str[i]] = 1;
+         // console.log(count);
       }
       else{
-         count[str[i]]=1;
-      }
-   }  
-   let filterDup = Object.values(count).filter((duplicate) => duplicate >=2)
-   return filterDup;
+         if(count[str[i]]===1){
+            result += 1;
+            // console.log(count);
+         }
+         count[str[i]]+= 1;
+      }  
+   }
+   return result;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const duplicateCount2=(string)=>{
+//    let str = string.toLowerCase().split('')
+//    let count = {};
+//    let result =0;
+//    for(let i=0; i<str.length; i++){
+//       if(!count.hasOwnProperty([str[i]])){
+//          count[str[i]]=0;
+//          console.log(count);
+//       }
+//       else{
+//         if( count[str[i]]===0){
+//             res+=1;
+//            console.log(count);
+//         }
+//         count[str[i]]=count[str[i]] +1
+//       }
+//    }
+   
+//    return res;
+// };
+// console.log(duplicateCount("aabbcde"));
+
+
